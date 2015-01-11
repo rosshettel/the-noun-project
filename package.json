@@ -2,7 +2,7 @@
   "name": "the-noun-project",
   "version": "1.0.0",
   "description": "Node.js wrapper for The Noun Project's API",
-  "main": "index.js",
+  "main": "nounproject.js",
   "scripts": {
     "test": "mocha"
   },
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/rosshettel/the-noun-project",
   "dependencies": {
+    "interpolate": "^0.1.0",
     "mocha": "^2.0.1",
     "request": "^2.51.0"
   }

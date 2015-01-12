@@ -43,6 +43,16 @@ var Client = module.exports = function (config) {
         self.get(path, callback);
     }
 
+    //icons : Operations on icons endpoints
+    this.GetRecentIcons = function (options, callback) {
+        self.get('/icons/recent_uploads', options, callback);
+    }
+
+    this.GetIconsByTerm = function (term, options, callback) {
+        var path = ['/icons/', term].join('');
+        self.get(path, options, callback);
+    }
+
     //oauth : Operations on oauth endpoints
     this.GetUsage = function (callback) {
         self.get('/oauth/usage', {}, callback);

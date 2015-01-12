@@ -49,6 +49,12 @@ var Client = module.exports = function (config) {
 
     this.GetIconsByTerm = function (term, options, callback) {
         var path = ['/icons/', term].join('');
+
+        //this argument 500's if not an int
+        if (options.limit_to_public_domain === true) {
+            options.limit_to_public_domain = '1';
+        }
+
         self.get(path, options, callback);
     }
 

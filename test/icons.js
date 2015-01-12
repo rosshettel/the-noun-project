@@ -33,5 +33,20 @@ describe('Icons : Operations on icons endpoints', function () {
                 done();
             });
         });
+        it('should not 500 if passed limit_to_public_domain: true', function (done) {
+            nounProject.GetIconsByTerm('goat', {limit_to_public_domain: true}, function (err, data) {
+                assert.ifError(err);
+                assert(data.icons);
+                done();
+            });
+        });
+        it('should return only public domain icons', function (done) {
+            nounProject.GetIconsByTerm('goat', {limit_to_public_domain: true}, function (err, data) {
+                assert.ifError(err);
+                assert(data.icons);
+                assert.equal(data.icons[0].license_description, 'public-domain');
+                done();
+            });
+        });
     });
 });

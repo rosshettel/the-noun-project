@@ -2,7 +2,6 @@
 
 var Client = module.exports = function (config) {
     var request = require('request'),
-        interpolate = require('interpolate'),
         Util = require('./util'),
         baseUrl = 'http://api.thenounproject.com',
         oauth = {

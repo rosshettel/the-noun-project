@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/rosshettel/the-noun-project",
   "dependencies": {
-    "interpolate": "^0.1.0",
     "mocha": "^2.0.1",
     "request": "^2.51.0"
   }

@@ -1,6 +1,8 @@
 The Noun Project
 ================
+[![npm version](https://badge.fury.io/js/the-noun-project.svg)](http://badge.fury.io/js/the-noun-project)
 [![Build Status](https://travis-ci.org/rosshettel/the-noun-project.svg?branch=master)](https://travis-ci.org/rosshettel/the-noun-project)
+
 
 Node.js wrapper for The Noun Project's API
 

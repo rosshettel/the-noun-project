@@ -14,30 +14,27 @@ var Client = module.exports = function (config) {
     //collection: Operations on collection endpoints
     this.GetCollectionIconsById = function (id, options, callback) {
         var path = ['/collection/', id, '/icons'].join('');
-        self.get(path, options, function (err, data) {
-            callback(err, data);
-        });
+        self.get(path, options, callback);
     }
 
     this.GetCollectionIconsBySlug = function (slug, options, callback) {
         var path = ['/collection/', slug, '/icons'].join('');
-        self.get(path, options, function (err, data) {
-            callback(err, data);
-        });
+        self.get(path, options, callback);
     }
 
     this.GetCollectionById = function (id, options, callback) {
         var path = ['/collection/', id].join('');
-        self.get(path, options, function (err, data) {
-            callback(err, data);
-        });
+        self.get(path, options, callback);
+    }
+
+    this.GetCollectionBySlug = function (slug, options, callback) {
+        var path = ['/collection/', slug].join('');
+        self.get(path, options, callback);
     }
 
     //oauth : Operations on oauth endpoints
     this.GetUsage = function (callback) {
-        self.get('/oauth/usage', {}, function (err, data) {
-            callback(err, data);
-        });
+        self.get('/oauth/usage', {}, callback);
     }
 
 

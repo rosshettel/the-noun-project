@@ -45,4 +45,14 @@ describe('Collection: Operations on collection endpoints', function () {
         });
     });
 
+    describe('GetCollectionBySlug', function () {
+        it('should return a collection', function (done) {
+            nounProject.GetCollectionBySlug('contact', function (err, data) {
+                assert.ifError(err);
+                assert(data.collection);
+                done();
+            });
+        });
+    });
+
 });

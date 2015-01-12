@@ -54,5 +54,4 @@ describe('Collection: Operations on collection endpoints', function () {
             });
         });
     });
-
 });

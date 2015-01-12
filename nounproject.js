@@ -22,14 +22,25 @@ var Client = module.exports = function (config) {
         self.get(path, options, callback);
     }
 
-    this.GetCollectionById = function (id, options, callback) {
+    this.GetCollectionById = function (id, callback) {
         var path = ['/collection/', id].join('');
-        self.get(path, options, callback);
+        self.get(path, callback);
     }
 
-    this.GetCollectionBySlug = function (slug, options, callback) {
+    this.GetCollectionBySlug = function (slug, callback) {
         var path = ['/collection/', slug].join('');
-        self.get(path, options, callback);
+        self.get(path, callback);
+    }
+
+    //icon : Operations on icon endpoints
+    this.GetIconById = function (id, callback) {
+        var path = ['/icon/', id].join('');
+        self.get(path, callback);
+    }
+
+    this.GetIconByTerm = function (term, callback) {
+        var path = ['/icon/', term].join('');
+        self.get(path, callback);
     }
 
     //oauth : Operations on oauth endpoints

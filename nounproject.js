@@ -60,7 +60,23 @@ var Client = module.exports = function (config) {
 
     //oauth : Operations on oauth endpoints
     this.GetUsage = function (callback) {
-        self.get('/oauth/usage', {}, callback);
+        self.get('/oauth/usage', callback);
+    }
+
+    //user : Operations on user endpoints
+    this.GetUserCollection = function (userId, slug, callback) {
+        var path = ['/user/', userId, '/collections/', slug].join('');
+        self.get(path, callback);
+    }
+
+    this.GetUserCollections = function (userId, callback) {
+        var path = ['/user/', userId, '/collections'].join('');
+        self.get(path, callback);
+    }
+
+    this.GetUserUploads = function (username, options, callback) {
+        var path = ['/user/', username, '/uploads'].join('');
+        self.get(path, options, callback);
     }
 
 

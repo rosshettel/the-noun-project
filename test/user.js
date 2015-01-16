@@ -1,7 +1,7 @@
 describe('User : Operations on user endpoints', function () {
-    describe('GetUserCollection', function () {
+    describe('getUserCollection', function () {
         it('should get a users collection', function (done) {
-            nounProject.GetUserCollection('487481', 'contact', function (err, data) {
+            nounProject.getUserCollection('487481', 'contact', function (err, data) {
                 assert.ifError(err);
                 assert(data.collection);
                 assert.equal(data.collection.author_id, '487481');
@@ -9,16 +9,16 @@ describe('User : Operations on user endpoints', function () {
             });
         });
     });
-    describe('GetUserCollections', function () {
+    describe('getUserCollections', function () {
         it('should get a users collections', function (done) {
-            nounProject.GetUserCollections('1', function (err, data) {
+            nounProject.getUserCollections('1', function (err, data) {
                 assert.ifError(err);
                 assert(data.collections);
                 done();
             });
         });
     });
-    describe('GetUserUploads', function () {
+    describe('getUserUploads', function () {
         it('should get a users uploads', function (done) {
             nounProject.GetUserUploads('mnmly', function (err, data) {
                 assert.ifError(err);

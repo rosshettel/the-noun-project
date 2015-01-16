@@ -1,7 +1,7 @@
 describe('Collection: Operations on collection endpoints', function () {
-    describe('GetCollectionIconsById', function () {
+    describe('getCollectionIconsById', function () {
         it('should get a list of collections', function (done) {
-            nounProject.GetCollectionIconsById('1', function (err, data) {
+            nounProject.getCollectionIconsById('1', function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 assert(data.icons.length > 0)
@@ -9,7 +9,7 @@ describe('Collection: Operations on collection endpoints', function () {
             });
         });
         it('should return only 1 collection', function (done) {
-            nounProject.GetCollectionIconsById('1', { limit: 1 }, function (err, data) {
+            nounProject.getCollectionIconsById('1', { limit: 1 }, function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 assert(data.icons.length, 1);
@@ -18,16 +18,16 @@ describe('Collection: Operations on collection endpoints', function () {
         });
     });
 
-    describe('GetCollectionIconsBySlug', function () {
+    describe('getCollectionIconsBySlug', function () {
         it('should get a list of collections', function (done) {
-            nounProject.GetCollectionIconsBySlug('contact', function (err, data) {
+            nounProject.getCollectionIconsBySlug('contact', function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 done();
             });
         });
         it('should return an error if none found', function (done) {
-            nounProject.GetCollectionIconsBySlug('', function (err, data) {
+            nounProject.getCollectionIconsBySlug('', function (err, data) {
                 assert(err);
                 assert(err, 'HTTP 404 Status Code');
                 done();
@@ -35,9 +35,9 @@ describe('Collection: Operations on collection endpoints', function () {
         });
     });
 
-    describe('GetCollectionById', function () {
+    describe('getCollectionById', function () {
         it('should return a collection', function (done) {
-            nounProject.GetCollectionById('1',  function (err, data) {
+            nounProject.getCollectionById('1',  function (err, data) {
                 assert.ifError(err);
                 assert(data.collection);
                 done();
@@ -45,9 +45,9 @@ describe('Collection: Operations on collection endpoints', function () {
         });
     });
 
-    describe('GetCollectionBySlug', function () {
+    describe('getCollectionBySlug', function () {
         it('should return a collection', function (done) {
-            nounProject.GetCollectionBySlug('contact', function (err, data) {
+            nounProject.getCollectionBySlug('contact', function (err, data) {
                 assert.ifError(err);
                 assert(data.collection);
                 done();

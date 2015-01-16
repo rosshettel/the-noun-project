@@ -31,7 +31,7 @@ The query string `options` object is optional and can be omitted. See the tests 
 
 
 ````javascript
-nounProject.GetIconsByTerm('goat', {limit: 5}, function (err, data) {
+nounProject.getIconsByTerm('goat', {limit: 5}, function (err, data) {
     if (!err) {
         console.log(data.icons);
     }
@@ -39,7 +39,7 @@ nounProject.GetIconsByTerm('goat', {limit: 5}, function (err, data) {
 ````
 **or**
 ````javascript
-nounProject.GetIconsByTerm('goat', function (err, data) {
+nounProject.getIconsByTerm('goat', function (err, data) {
     if (!err) {
         console.log(data.icons);
     }

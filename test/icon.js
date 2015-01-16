@@ -1,7 +1,7 @@
 describe('Icon : Operations on icon endpoints', function () {
-    describe('GetIconById', function () {
+    describe('getIconById', function () {
         it('should get an icon', function (done) {
-            nounProject.GetIconById('1', function (err, data) {
+            nounProject.getIconById('1', function (err, data) {
                 assert.ifError(err);
                 assert(data.icon);
                 done();
@@ -9,9 +9,9 @@ describe('Icon : Operations on icon endpoints', function () {
         });
     });
 
-    describe('GetIconByTerm', function (done) {
+    describe('getIconByTerm', function (done) {
         it('should get an icon', function (done) {
-            nounProject.GetIconByTerm('test', function (err, data) {
+            nounProject.getIconByTerm('test', function (err, data) {
                 assert.ifError(err);
                 assert(data.icon);
                 done();

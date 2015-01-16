@@ -11,43 +11,43 @@ var Client = module.exports = function (config) {
         self = this;
 
     //collection: Operations on collection endpoints
-    this.GetCollectionIconsById = function (id, options, callback) {
+    this.getCollectionIconsById = function (id, options, callback) {
         var path = ['/collection/', id, '/icons'].join('');
         self.get(path, options, callback);
     }
 
-    this.GetCollectionIconsBySlug = function (slug, options, callback) {
+    this.getCollectionIconsBySlug = function (slug, options, callback) {
         var path = ['/collection/', slug, '/icons'].join('');
         self.get(path, options, callback);
     }
 
-    this.GetCollectionById = function (id, callback) {
+    this.getCollectionById = function (id, callback) {
         var path = ['/collection/', id].join('');
         self.get(path, callback);
     }
 
-    this.GetCollectionBySlug = function (slug, callback) {
+    this.getCollectionBySlug = function (slug, callback) {
         var path = ['/collection/', slug].join('');
         self.get(path, callback);
     }
 
     //icon : Operations on icon endpoints
-    this.GetIconById = function (id, callback) {
+    this.getIconById = function (id, callback) {
         var path = ['/icon/', id].join('');
         self.get(path, callback);
     }
 
-    this.GetIconByTerm = function (term, callback) {
+    this.getIconByTerm = function (term, callback) {
         var path = ['/icon/', term].join('');
         self.get(path, callback);
     }
 
     //icons : Operations on icons endpoints
-    this.GetRecentIcons = function (options, callback) {
+    this.getRecentIcons = function (options, callback) {
         self.get('/icons/recent_uploads', options, callback);
     }
 
-    this.GetIconsByTerm = function (term, options, callback) {
+    this.getIconsByTerm = function (term, options, callback) {
         var path = ['/icons/', term].join('');
 
         //this argument 500's if not an int
@@ -59,22 +59,22 @@ var Client = module.exports = function (config) {
     }
 
     //oauth : Operations on oauth endpoints
-    this.GetUsage = function (callback) {
+    this.getUsage = function (callback) {
         self.get('/oauth/usage', callback);
     }
 
     //user : Operations on user endpoints
-    this.GetUserCollection = function (userId, slug, callback) {
+    this.getUserCollection = function (userId, slug, callback) {
         var path = ['/user/', userId, '/collections/', slug].join('');
         self.get(path, callback);
     }
 
-    this.GetUserCollections = function (userId, callback) {
+    this.getUserCollections = function (userId, callback) {
         var path = ['/user/', userId, '/collections'].join('');
         self.get(path, callback);
     }
 
-    this.GetUserUploads = function (username, options, callback) {
+    this.getUserUploads = function (username, options, callback) {
         var path = ['/user/', username, '/uploads'].join('');
         self.get(path, options, callback);
     }

@@ -20,7 +20,7 @@ describe('User : Operations on user endpoints', function () {
     });
     describe('getUserUploads', function () {
         it('should get a users uploads', function (done) {
-            nounProject.GetUserUploads('mnmly', function (err, data) {
+            nounProject.getUserUploads('mnmly', function (err, data) {
                 assert.ifError(err);
                 assert(data.uploads);
                 done();

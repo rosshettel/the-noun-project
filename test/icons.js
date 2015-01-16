@@ -19,7 +19,7 @@ describe('Icons : Operations on icons endpoints', function () {
 
     describe('getIconsByTerm', function () {
         it('should return icons', function (done) {
-            nounProject.GetIconsByTerm('goat', function (err, data) {
+            nounProject.getIconsByTerm('goat', function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 done();

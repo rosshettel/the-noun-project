@@ -1,7 +1,7 @@
 describe('Collection: Operations on collection endpoints', function () {
     describe('getCollectionIconsById', function () {
         it('should get a list of collections', function (done) {
-            nounProject.getCollectionIconsById('1', function (err, data) {
+            nounProject.getCollectionIconsById('2', function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 assert(data.icons.length > 0)
@@ -9,7 +9,7 @@ describe('Collection: Operations on collection endpoints', function () {
             });
         });
         it('should return only 1 collection', function (done) {
-            nounProject.getCollectionIconsById('1', { limit: 1 }, function (err, data) {
+            nounProject.getCollectionIconsById('2', { limit: 1 }, function (err, data) {
                 assert.ifError(err);
                 assert(data.icons);
                 assert(data.icons.length, 1);

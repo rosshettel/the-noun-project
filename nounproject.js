@@ -3,7 +3,7 @@
 var Client = module.exports = function (config) {
     var request = require('request'),
         Util = require('./util'),
-        baseUrl = 'http://api.thenounproject.com',
+        baseUrl = 'https://api.thenounproject.com',
         oauth = {
             consumer_key: config.key || '',
             consumer_secret: config.secret || ''

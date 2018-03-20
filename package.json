@@ -1,6 +1,6 @@
 {
   "name": "the-noun-project",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Node.js wrapper for The Noun Project's API",
   "main": "nounproject.js",
   "scripts": {

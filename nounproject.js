@@ -96,7 +96,7 @@ var Client = module.exports = function (config) {
             oauth: oauth
         }, function (err, response, body) {
             if (err) {
-                callback(new Error('Noun Project API Error'));
+                callback(new Error('Noun Project API: ' + err));
             } else if (response.statusCode !== 200) {
                 callback(response.statusCode + ' HTTP response code');
             } else {
